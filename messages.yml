@@ -1,7 +1,7 @@
 # Check this for sample valid values for `every`
 # https://github.com/javan/whenever#example-schedulerb-file
 
-- every: '1.minute'
+- every: '1.hour'
   message_path: 'messages/hello_world.sh'
-- every: '1.minute'
-  message_path: 'messages/hello_world.sh'
+- every: '15.minutes'
+  message_path: 'messages/uptime.sh'
