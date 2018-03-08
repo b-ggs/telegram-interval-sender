@@ -15,9 +15,12 @@ end
 def schedule_template(options)
   every = options['every']
   message_path = options['message_path']
+  command = "cd #{File.expand_path(project_path)} && "
+  command << "#{message_path} | "
+  command << 'bundle exec ruby send.rb'
   <<-TEMPLATE
 every #{every} do
-  command '#{File.expand_path(File.join(project_path, message_path))}'
+  command '#{command}'
 end
   TEMPLATE
 end
@@ -36,3 +39,5 @@ File.open(schedule_path, 'w') do |file|
 end
 
 `whenever -f #{schedule_path} -i`
+
+puts 'Successfully updated crontab!'
