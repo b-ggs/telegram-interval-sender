@@ -2,3 +2,4 @@ config.yml
 config
 config/*
 .schedule.rb
+.chat_id
