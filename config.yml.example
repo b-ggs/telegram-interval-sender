@@ -1,0 +1,4 @@
+token: YOUR BOT TOKEN
+users:
+  - @user_i_want_to_send_messages_to
+  - @botfather

@@ -1,0 +1,2 @@
+- every: 1.minute
+  message_path: 'messages/hello_world.sh'
